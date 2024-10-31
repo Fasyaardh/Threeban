@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP N 3 BANYURESMI</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya Umum */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E6F7FF; /* Biru Muda */
+            color: #333;
+        }
+
+        header {
+            background-color: #007ACC; /* Biru Tua */
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            margin-right: 0.5rem;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        /* Menu Navigasi */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: #007ACC;
+            border-color: #007ACC; /* Ubah warna border saat hover */
+        }
+
+        /* Konten Halaman */
+        .content {
+            padding: 2rem;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        /* Banner */
+        .banner {
+            background-image: url('images/bg.JPG'); /* Ganti dengan path gambar banner Anda */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        /* Galeri */
+        .gallery-images {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .gallery-images img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-images img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Kepala Sekolah */
+        .headmaster {
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .headmaster img {
+            width: 100px; /* Ukuran gambar kepala sekolah */
+            height: 100px; /* Ukuran gambar kepala sekolah */
+            border-radius: 50%; /* Membuat gambar menjadi bulat */
+            margin-right: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004C8C; /* Biru Tua */
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header dan Navigasi -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.JPG" alt="Logo SMP N 3 BANYURESMI" class="logo"> <!-- Ganti dengan path logo Anda -->
+            <h1>SMP NEGERI 3 BANYURESMI</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Beranda</a></li>
+                <li><a href="#" onclick="showPage('about')">Profil</a></li>
+                <li><a href="#" onclick="showPage('programs')">Program</a></li>
+                <li><a href="#" onclick="showPage('extracurriculars')">Ekstrakurikuler</a></li>
+                <li><a href="#" onclick="showPage('gallery')">Galeri</a></li>
+                <li><a href="#" onclick="showPage('motivation')">Motivasi</a></li>
+                <li><a href="#" onclick="showPage('notBullying')">Not Bullying</a></li>
+                <li><a href="#" onclick="showPage('contact')">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <div>
+            <h2>"Pendidikan Adalah Senjata Paling Ampuh untuk Mengubah Dunia"</h2>
+            <p>Semangat Belajar di SMP N 3 BANYURESMI</p>
+        </div>
+    </section>
+
+    <!-- Konten Halaman -->
+    <section id="home" class="content active">
+        <h2>Selamat Datang di SMP N 3 BANYURESMI</h2>
+        <p>Di sini Anda akan menemukan informasi terbaru tentang sekolah kami dan kegiatan yang kami selenggarakan.</p>
+    </section>
+
+    <section id="about" class="content">
+        <h2>Profil Sekolah</h2>
+        <p>SMP N 3 BANYURESMI adalah sekolah yang berdedikasi untuk mencetak generasi cerdas, berkarakter, dan kompeten.</p>
+        
+        <div class="headmaster">
+            <img src="images/kepala.JPG" alt="Kepala Sekolah Yeti Sumiati S.P.D"> <!-- Ganti dengan path gambar kepala sekolah Anda -->
+            <div>
+                <h3>Yeti Sumiati, S.P.D</h3>
+                <p>Kepala Sekolah</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="content">
+        <h2>Program Akademik</h2>
+        <p>SMP N 3 BANYURESMI menawarkan berbagai program untuk mendukung perkembangan akademik siswa.</p>
+    </section>
+
+    <section id="extracurriculars" class="content">
+        <h2>Ekstrakurikuler</h2>
+        <ul>
+            <li>Basket</li>
+            <li>Volly</li>
+            <li>Paskibra</li>
+            <li>Futsal</li>
+        </ul>
+    </section>
+
+    <section id="gallery" class="content">
+        <h2>Galeri Kegiatan</h2>
+        <div class="gallery-images">
+            <img src="images/image1.JPG" alt="Kegiatan 1"> <!-- Ganti dengan path gambar kegiatan Anda -->
+            <img src="images/image2.JPG" alt="Kegiatan 2"> <!-- Ganti dengan path gambar kegiatan Anda -->
+            <img src="images/image3.JPG" alt="Kegiatan 3"> <!-- Ganti dengan path gambar kegiatan Anda -->
+        </div>
+    </section>
+
+    <section id="motivation" class="content">
+        <h2>Motivasi</h2>
+        <p>"Jadilah cahaya bagi dirimu sendiri dan orang lain. Setiap langkah kecil menuju tujuanmu adalah prestasi yang patut dirayakan."</p>
+    </section>
+
+    <section id="notBullying" class="content">
+        <h2>Not Bullying Sekolah Berprestasi</h2>
+        <p>SMP N 3 BANYURESMI berkomitmen untuk menciptakan lingkungan belajar yang aman dan nyaman bagi semua siswa. Kami melarang segala bentuk bullying dan menghargai keragaman di antara siswa. Mari kita bersama-sama menciptakan suasana yang positif dan saling menghargai.</p>
+    </section>
+
+    <section id="contact" class="content">
+        <h2>Kontak Kami</h2>
+        <p>Alamat: Jl. Cibuyutan Sukalaksana, Banyuresmi</p>
+        <p>Email: smpn3banyuresmi@gmail.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SMP N 3 BANYURESMI. Semua Hak Cipta Dilindungi. By: TeamFasya</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Sembunyikan semua konten
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Tampilkan konten yang dipilih
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
